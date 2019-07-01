@@ -768,8 +768,8 @@ void Test_iniparser_dump_ini(CuTest *tc)
         exit(-1);
        }
     /*check the data of old.ini*/
-    CuAssertStrEquals(tc,"hello world",iniparser_getstring(dic,"section:key_01",NULL));
-    CuAssertStrEquals(tc,"321abc",iniparser_getstring(dic,"section:key1",NULL));
+    CuAssertStrEquals(tc,"hello world",iniparser_getsting(dic,"section:key_01",NULL));
+    CuAssertStrEquals(tc,"321abc",iniparser_getsting(dic,"section:key1",NULL));
     /*open new.ini*/
     fp = fopen(INI_PATH_1,"w");
     if(fp == NULL)
